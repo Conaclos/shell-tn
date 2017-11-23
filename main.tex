@@ -293,7 +293,18 @@ mv "\$2"/*."\$1" sep/
 \textbf{fi}\\
 \end{frame}
 
-\begin{frame}{Itérations : tant-que}
+\begin{frame}{Instruction conditionnelle - exemple}
+\textbf{if} [ \$\# -gt 0 ]\\
+\textbf{then}\\
+\quad \# There exists at least one parameter\\
+\quad echo "\$1"\\
+\textbf{else}\\
+\quad echo "usage: \$0 param1"\\
+\quad exit 1\\
+\textbf{fi}\\
+\end{frame}
+
+\begin{frame}{Instruction d'itérations : tant-que}
 \textbf{while} command\\
 \textbf{do}\\
 \quad \# command has still 0 as exit status\\
