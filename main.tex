@@ -190,8 +190,8 @@
     \item Ecrit pour un interpréteur (python, node, sh, bash, ...)
     \item Un shebang \textbf{\#!} indique au Shell quel interpréteur utiliser
     \begin{itemize}
-        \item Il est placé sur la première ligne du fichier
-        \item Il est suivi par le chemin absolu de l'interpréteur\\
+        \item Placé sur la première ligne du fichier
+        \item Suivi par le chemin absolu de l'interpréteur\\
         \textbf{\#!~/bin/sh}\\
         \textbf{\#!~/bin/bash}\\
         \textbf{\#!~/usr/bin/python}
@@ -259,12 +259,12 @@ mv "\$2"/*."\$1" sep/
 \begin{frame}{Exit Status}
 \begin{itemize}
     \item L'exécution d'une commande réussit ou échoue
-    \item Après son exécution, une commande renvoie un status qui est un entier naturel
+    \item Après son exécution, une commande renvoie un statut qui est un entier naturel
     \begin{itemize}
         \item \textbf{0} indique un succès
         \item Un entier plus grand que 0 indique un échec
     \end{itemize}
-    \item \textbf{exit n} retourne le status $n$ au Shell appelant
+    \item \textbf{exit n} retourne le statut $n$ au Shell appelant
 \end{itemize}
 \end{frame}
 
@@ -278,11 +278,12 @@ mv "\$2"/*."\$1" sep/
         \item \textbf{[ 1 -lt 2 -a 2 -gt 1 ]} \quad exit status: 0
     \end{itemize}
     \item \textbf{]} est un paramètre obligatoire de la commande \textbf{[}
+    \item Ne pas oublier les espaces entre chaque paramètres
     \item Voir le manuel d'utilisation (\textbf{man test} ou \textbf{man [})
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Instruction Conditionnelles}
+\begin{frame}{Instruction conditionnelle}
 \textbf{if} command\\
 \textbf{then}\\
 \quad \# command has 0 as exit status\\
@@ -306,12 +307,12 @@ mv "\$2"/*."\$1" sep/
     \item \textbf{read answer} lit une ligne sur l'entrée standard et l'écrit dans la variable \textbf{\$answer}
     \item Une amélioration possible est de personnaliser le choix
     \begin{itemize}
-        \item \textbf{choix a b} attends \textbf{a} ou \textbf{b}
+        \item \textbf{choix a b} attend \textbf{a} ou \textbf{b}
     \end{itemize}
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Itérations : for-in}
+\begin{frame}{Instruction d'itérations : for-in}
 \textbf{for} var \textbf{in} sequence\\
 \textbf{do}\\
 \quad command1\\
@@ -320,9 +321,9 @@ unset var\\
 \begin{itemize}
     \item La séquence est un ensemble de valeurs séparées par des espaces
     \begin{itemize}
-        \item \textbf{\$*}
         \item \textbf{1 2 3}
         \item \textbf{alice karim tristan hadjer}
+        \item \textbf{'first element' 'second element'}
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -365,6 +366,7 @@ unset var\\
     \item Exemples
     \begin{itemize}
         \item cowsay -f "\$(choix duck tux)" $<$ file.txt
+        \item enlever a \$(enlever b x y a c b)
     \end{itemize}
 \end{itemize}
 \end{frame}
