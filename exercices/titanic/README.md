@@ -10,6 +10,9 @@ L'objectif de cet exercice est de vous faire utiliser les programmes suivants :
 - sort
 - uniq
 
+Voir la [cheat-sheet](./CHEATSHEET) pour un extrait des manuels des programmes
+précédents.
+
 
 ## Questions
 
