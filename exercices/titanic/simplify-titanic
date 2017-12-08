@@ -18,10 +18,6 @@ fi
 
 # Turn "<surname>, <title> <husband's firtnames> (<original name>)"
 # into <title> <husband's firtnames> <surname> (<original name>)
-# Use fullname of the port of embarkation
-#   C -> Cherbourg
-#   Q -> Queenstown
-#   S -> Southampton
 # Keep field Survived,Pclass,Name,Sex,Age,Embarked
 sed -E -e '1d' \
     -e 's/"(.*), ([^\(]*)( \(.*\))? ?"/\2 \1\3/' \
