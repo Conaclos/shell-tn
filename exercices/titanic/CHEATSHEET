@@ -1,0 +1,67 @@
+
+tail [OPTION]... [FILE]...
+    Imprimer sur la sortie standard les 10 dernières lignes de chaque fichier
+
+    -n NUM
+        output the last NUM lines, instead of the last 10
+
+wc [OPTION]... [FILE]...
+    Compter le nombre de lignes, de mots, ou de caractères dans le ou les
+    fichiers passés en paramètres, ou sur l’entrée standard.
+
+    -m
+        print the character counts
+    -l
+        print the newline counts
+    -w
+        print the word counts
+
+tr [OPTION]... STRING1 [STRING2]
+    "Traduire" des caractères provenant de l’entrée standard
+
+    -s
+        replace each sequence of a repeated character that is listed
+
+cut OPTION... [FILE]...
+    Extraire une partie spécifique de chaque ligne
+
+    -d DELIM
+        use DELIM as field delimiter
+    -f LIST
+        select only these fields
+
+grep -E [OPTION]... REGEX [FILE]...
+    Rechercher une expression rationnelle dans chaque ligne d’un ou de plusieurs
+    fichiers passés en paramètres (ou dans chaque ligne de l’entrée standard) et
+    affiche ces lignes sur la sortie standard.
+
+    -v
+        Invert the sense of matching, to select non-matching lines
+    -c
+        Suppress normal output; instead print a count of matching lines
+
+    REGEX
+        . désigne un caractère quelconque
+        ^ désigne le début d’une ligne
+        $ désigne la fin d’une ligne
+        [a-z] désigne un caractère entre a et z
+        [^a-z] désigne un caractère quelconque sauf entre a et z
+        ? indique aucune ou une répétition du précédent caractère
+        * indique une répétition quelconque du précédent caractère
+          (incluant aucune répétition)
+        {N} indique exactement N répétitions du précédent caractère
+
+sort [OPTION]... [FILE]...
+    Trier les lignes par ordre lexicographique, et les imprimer sur la sortie
+    standard.
+
+uniq [OPTION]... [FILE]
+    Conserver une répétition des lignes adjacentes identiques, et les imprimer
+    sur la sortie standard.
+
+    -c
+        prefix lines by the number of occurrences
+
+sed -E -e SCRIPT [-e SCRIPT]... [FILE]...
+    Appliquer  un ou des scripts sur un ou des fichier-s
+
